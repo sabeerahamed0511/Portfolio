@@ -1,5 +1,5 @@
 #home-container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #header {
@@ -16,7 +16,12 @@
     z-index: 999;
 }
 
-#nav-elements ul {
+#nav-elements #menu-btn {
+    display: none;
+}
+
+#nav-elements #for-pc,
+#nav-elements #for-mobile {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -109,7 +114,6 @@
 #home #techs-container #techs-header {
     padding-right: 10px;
     border-right: 3px solid gray; 
-
 }
 
 #home #techs-container .tech-img-conatiner {
@@ -124,4 +128,94 @@
     object-fit: cover;
     object-position: center;
     mix-blend-mode: color-burn;
+}
+
+@media screen and (max-width : 480px) {
+    #nav-elements #menu-btn {
+        display: inline-block;
+        font-size: 22px;
+    }
+
+    #nav-elements {
+        position: relative;
+    }
+    
+    #nav-elements #for-pc {
+        display: none;
+    }
+
+    #nav-elements #for-mobile{
+        background-color: var(--textBg);
+        position: absolute;
+        flex-flow: column wrap;
+        left: -40px;
+        padding: 10px 0 0;
+    }
+
+    #nav-elements #for-mobile::before {
+        content: "";
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: var(--textBg);
+        transform: rotate(45deg);
+        top: -6px;
+        right: 12px;
+    }
+
+    #nav-elements ul li {
+        margin-bottom: 10px;
+    }
+    #nav-elements ul li a {
+        color: white;
+    }
+
+
+    #home-container {
+        height: auto;
+    }
+
+    #home-container #home {
+        display: block;
+    }
+    
+    #home-container #home #intro {
+        flex-flow: column wrap;
+        text-align: center;
+        width: auto;
+    }
+
+    #home #intro #intro-a {
+        width: auto;
+        order: 2;
+    }
+
+    #home #intro #intro-b {
+        min-width: 100px;
+        width: 100px;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    #home #intro #intro-a #links {
+        justify-content: center;
+    }
+
+    #home #techs-container {
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    #home #techs-container #techs-header {
+        border: none;
+        grid-column: 1 / span 4;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #home #techs-container .tech-img-conatiner {
+        width: auto;
+    }
 }

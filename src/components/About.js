@@ -6,6 +6,7 @@ export default function About() {
     return (
         <section id="about">
             <div id="about-container">
+                <h5 id="for-mobile">ABOUT ME</h5>
                 <div id="about-img-container">
                     <img src={require("../images/ABOUT.jpeg")} />
                 </div>

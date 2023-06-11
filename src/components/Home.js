@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/home.css";
 
 export default function Home() {
-
+    const [boo, setBoo] = useState(false);
     return (
         <section id="home-container">
             <header id="header">
@@ -10,7 +10,33 @@ export default function Home() {
                     Sabeer.dev
                 </h3>
                 <nav id="nav-elements">
-                    <ul>
+                    <span id="menu-btn" onClick={() => setBoo(pre => !pre)}><ion-icon name="menu"></ion-icon></span>
+                    {
+                        boo &&
+                        <ul id="for-mobile" onClick={() => setBoo(false)}>
+                            <li>
+                                <a href="#home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#project">
+                                    Project
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    }
+                    <ul id="for-pc">
                         <li>
                             <a href="#home">
                                 Home
@@ -59,25 +85,25 @@ export default function Home() {
                 <div id="techs-container">
                     <h4 id="techs-header">Tech Stack</h4>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/HTML.png")} alt="NA"/>
+                        <img src={require("../images/HTML.png")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/CSS.png")} alt="NA"/>
+                        <img src={require("../images/CSS.png")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/JS.png")} alt="NA"/>
+                        <img src={require("../images/JS.png")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/REACT.png")} alt="NA"/>
+                        <img src={require("../images/REACT.png")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/NODE.png")} alt="NA"/>
+                        <img src={require("../images/NODE.png")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/MONGODB.jpg")} alt="NA"/>
+                        <img src={require("../images/MONGODB.jpg")} alt="NA" />
                     </div>
                     <div className="tech-img-conatiner">
-                        <img src={require("../images/GITHUB.png")} alt="NA"/>
+                        <img src={require("../images/GITHUB.png")} alt="NA" />
                     </div>
                 </div>
             </div>
