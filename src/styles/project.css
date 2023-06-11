@@ -1,0 +1,79 @@
+#project {
+    display: flex;
+    justify-content: center;
+}
+
+#project #project-container {
+    width: 700px;
+}
+
+#project #project-container #demo {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#project #project-container #demo span {
+    font-weight: bold;
+    color: black;
+}
+
+#project #project-container #portfolio-heading {
+    color: var(--textBg);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#project #project-container h3 {
+    margin-bottom: 20px;
+}
+
+.each-project {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.each-project .project-a {
+    width: 60%;
+    aspect-ratio: 2 / 1;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+.each-project .project-a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid gray;
+}
+
+.each-project .project-b {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.each-project .project-b h5 {
+    margin-bottom: 10px;
+}
+
+.each-project .project-b p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+.each-project .project-b .project-links .git-link {
+    margin-right: 20px;
+}
+
+.each-project .project-b .project-links .git-link,
+.each-project .project-b .project-links .site-link {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
