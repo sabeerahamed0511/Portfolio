@@ -40,3 +40,29 @@
     margin-top: 5px;
     font-size: 14px;
 }
+
+@media screen and (max-width : 480px) {
+    #contact {
+        display: block;
+    }
+    
+    #contact-container {
+        width: auto;
+        padding: 20px;
+    }
+
+    #contact-details {
+        display: block;
+        margin: 10px;
+    }
+
+    #contact-details .each-detail {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #contact-container #contact-header,
+    #contact-container h3 {
+        text-align: center;
+    }
+}

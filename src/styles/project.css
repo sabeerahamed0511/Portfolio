@@ -77,3 +77,34 @@
     outline: none;
     color: black;
 }
+
+@media screen and (max-width : 480px) {
+    #project {
+        display: block;
+        text-align: center;
+    }
+    
+    #project #project-container {
+        width: auto;
+    }
+
+    .each-project {
+        flex-flow: column wrap;
+    }
+
+    .each-project .project-a {
+        width: 100%;
+    }
+
+    .each-project .project-b {
+        width: 100%;
+    }
+
+    #project #project-container #for-mobile .project-a{
+        order: 1;
+    }
+
+    #project #project-container #for-mobile .project-b{
+        order: 2;
+    }
+}

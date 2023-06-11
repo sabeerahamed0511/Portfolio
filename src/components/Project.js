@@ -39,7 +39,7 @@ export default function Project() {
                     </div>
                 </div>
 
-                <div className="each-project">
+                <div className="each-project" id="for-mobile">
                     <div className="project-b">
                         <h5>INSTACLONE</h5>
                         <p>
